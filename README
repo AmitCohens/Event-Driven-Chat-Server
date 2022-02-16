@@ -1,0 +1,23 @@
+Author id : 315147330
+
+Personal details : 
+Name : Amit Cohen
+id : 315147330
+
+Exercise name :  Event-Driven Chat Server
+
+Submitted files : 
+1)chatServer.c : the code.
+2)README : this file, which explains the code.
+
+
+
+In addition to the functions I received, I wrote 7 more functions:
+
+1)int create_chat_server(int port);>> This function creates a server-socket and returns its fd.
+2)int find_the_second_maxFD(conn_pool_t *pool);>> This function finds the second maximum in the fd.
+3)msg * create_new_msg(char* buffer,int len);>> This function produces a msg type structure and returns it.
+4)void remove_all_msg_for_conn(conn * con_ptr);>> This function removes all messages from the client.
+5)int add_msg_to_list(conn *pConn, char *buffer, int len);>> This function receives one client and adds one message to the top of its message queue.
+6)void destroy_connection_pool(conn_pool_t * pool);>> This function deletes the pool of clients and frees up all memory.
+7)char * read_from_client(int sd,conn_pool_t * pool);>>This function receives an sd which calls it a buffer and returns the buffer.
